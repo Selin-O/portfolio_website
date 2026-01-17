@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1600" viewBox="0 0 800 1600">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(255,62,165,0.14)" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.5" fill="rgba(255,62,165,0.25)"/>
+    </pattern>
+
+    <!-- Slight top-weight so the flip is visible. -->
+    <radialGradient id="fade" cx="50%" cy="38%" r="70%">
+      <stop offset="0" stop-color="rgba(255,62,165,0.18)"/>
+      <stop offset="1" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Tile 1 -->
+  <rect width="800" height="800" y="0" fill="url(#g)"/>
+  <rect width="800" height="800" y="0" fill="url(#fade)"/>
+
+  <!-- Tile 2: tile 1 flipped upside down -->
+  <g transform="translate(0 1600) scale(1 -1)">
+    <rect width="800" height="800" y="0" fill="url(#g)"/>
+    <rect width="800" height="800" y="0" fill="url(#fade)"/>
+  </g>
+</svg>

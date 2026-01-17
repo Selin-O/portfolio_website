@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff3ea5"/>
+      <stop offset="1" stop-color="#ffa0d8"/>
+    </linearGradient>
+    <radialGradient id="r" cx="30%" cy="30%" r="80%">
+      <stop offset="0" stop-color="rgba(255,62,165,0.55)"/>
+      <stop offset="1" stop-color="rgba(0,0,0,0)"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="540" rx="32" fill="rgba(255,255,255,0.04)"/>
+  <rect width="900" height="540" rx="32" fill="url(#r)"/>
+  <g stroke="url(#g)" stroke-width="3" opacity="0.9" filter="url(#glow)">
+    <path d="M120 420C220 300 260 270 360 300s180 10 240-80 140-130 220-100"/>
+    <path d="M120 160C240 120 320 140 380 210s170 110 260 70 120-80 160-150"/>
+  </g>
+  <g fill="rgba(255,62,165,0.9)" filter="url(#glow)">
+    <circle cx="120" cy="420" r="7"/><circle cx="360" cy="300" r="7"/><circle cx="600" cy="220" r="7"/><circle cx="860" cy="240" r="7"/>
+    <circle cx="120" cy="160" r="7"/><circle cx="380" cy="210" r="7"/><circle cx="640" cy="280" r="7"/><circle cx="860" cy="60" r="7"/>
+  </g>
+  <text x="56" y="86" fill="rgba(255,255,255,0.9)" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Inter,sans-serif" font-size="28">AI · LIFE SCIENCES</text>
+</svg>

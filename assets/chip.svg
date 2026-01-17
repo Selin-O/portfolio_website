@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="p" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff3ea5"/>
+      <stop offset="1" stop-color="#ff89cf"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="20" y="20" rx="28" ry="28" width="600" height="380" fill="rgba(255,255,255,0.05)" stroke="rgba(255,62,165,0.35)" stroke-width="2"/>
+  <rect x="210" y="130" rx="18" ry="18" width="220" height="160" fill="rgba(10,5,8,0.85)" stroke="url(#p)" stroke-width="3" filter="url(#glow)"/>
+  <g stroke="url(#p)" stroke-width="3" opacity="0.9" filter="url(#glow)">
+    <path d="M210 160H130C95 160 80 145 80 110V70"/>
+    <path d="M430 160H510C545 160 560 145 560 110V70"/>
+    <path d="M210 260H130C95 260 80 275 80 310V350"/>
+    <path d="M430 260H510C545 260 560 275 560 310V350"/>
+    <path d="M320 130V70"/>
+    <path d="M320 290V350"/>
+  </g>
+  <g fill="rgba(255,62,165,0.85)">
+    <circle cx="80" cy="70" r="7"/><circle cx="560" cy="70" r="7"/>
+    <circle cx="80" cy="350" r="7"/><circle cx="560" cy="350" r="7"/>
+    <circle cx="320" cy="70" r="7"/><circle cx="320" cy="350" r="7"/>
+  </g>
+  
+</svg>
