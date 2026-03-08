@@ -111,6 +111,45 @@
       window.toast('Sent ✓ (demo)');
     });
   }
+
+// Rotating tagline (typewriter)
+const rotEl = document.getElementById('rotating');
+if (rotEl) {
+  const phrases = [
+    'a 3× hackathon winner',
+    'a web developer',
+    'an innovator',
+    'a boba & coffee connoisseur',
+    'a Pokémon TCG collector',
+    'a UX/UI + security nerd',
+  ];
+  let i = 0, j = 0, deleting = false;
+  const typeSpeed = 44;
+  const deleteSpeed = 26;
+  const hold = 900;
+
+  const tick = () => {
+    const phrase = phrases[i % phrases.length];
+    if (!deleting) {
+      j++;
+      rotEl.textContent = phrase.slice(0, j);
+      if (j >= phrase.length) {
+        deleting = true;
+        setTimeout(tick, hold);
+        return;
+      }
+    } else {
+      j--;
+      rotEl.textContent = phrase.slice(0, Math.max(0, j));
+      if (j <= 0) {
+        deleting = false;
+        i++;
+      }
+    }
+    setTimeout(tick, deleting ? deleteSpeed : typeSpeed);
+  };
+  tick();
+}
 })();
 
 
